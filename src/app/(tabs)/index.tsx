@@ -1,10 +1,8 @@
 import { Image, ScrollView, StyleSheet } from 'react-native';
 
-import EditScreenInfo from '@/src/components/EditScreenInfo';
-import { Text, View } from '@/src/components/Themed';
-import products from '../../../assets/data/products';
-import Colors from '../../constants/Colors';
-import ProductListItem from '@/src/components/ProductListItem';
+import products from '@assets/data/products';
+import Colors from '@constants/Colors';
+import ProductListItem from '@components/ProductListItem';
 
 export default function MenuScreen() {
   const product = products[0];
