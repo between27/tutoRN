@@ -1,31 +1,41 @@
-import { StyleSheet } from 'react-native';
+import { Image, ScrollView, StyleSheet } from 'react-native';
 
 import EditScreenInfo from '@/src/components/EditScreenInfo';
 import { Text, View } from '@/src/components/Themed';
+import products from '../../../assets/data/products';
+import Colors from '../../constants/Colors';
+import ProductListItem from '@/src/components/ProductListItem';
 
-export default function TabOneScreen() {
+export default function MenuScreen() {
+  const product = products[0];
   return (
-    <View style={styles.container}>
-      <Text style={styles.title}>Tab One</Text>
-      <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
-      <EditScreenInfo path="app/(tabs)/index.tsx" />
-    </View>
+    <ScrollView style={styles.container}>
+      <ProductListItem product={products[0]} />
+      <ProductListItem product={products[1]} />
+    </ScrollView>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: 'white',
+    borderRadius: 20,
+    padding: 10,
+    overflow: 'hidden',
+  },
+  image: {
+    width: '100%',
+    aspectRatio: 1,
+    alignSelf: 'center',
   },
   title: {
-    fontSize: 20,
-    fontWeight: 'bold',
+    fontWeight: '600',
+    fontSize: 18,
+    marginVertical: 10,
   },
-  separator: {
-    marginVertical: 30,
-    height: 1,
-    width: '80%',
+  price: {
+    color: Colors.light.tint,
+    fontWeight: 'bold',
+    marginTop: 'auto',
   },
 });
