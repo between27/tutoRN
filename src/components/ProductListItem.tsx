@@ -12,7 +12,7 @@ const ProductListItem = ({ product }) => {
         resizeMode="contain"
       />
       <Text style={styles.title}>{product.name}</Text>
-      <Text style={styles.price}>$s{product.price.toFixed(2)}</Text>
+      <Text style={styles.price}>${product.price.toFixed(2)}</Text>
     </View>
   );
 };
