@@ -10,12 +10,6 @@ const MenuStack = () => {
         title: 'Menu',
     }}
     />
-    <Stack.Screen
-    name="[id]"
-    options={{
-        title: 'Details',
-    }}
-    />
     
         </Stack>
 }
